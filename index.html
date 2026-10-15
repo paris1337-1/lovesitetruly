@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FBF4E8">
+<title>100 и 1 причина почему я люблю тебя&lt;3</title>
+<style>
+:root{
+  --cream:#FBF4E8; --paper:#FFFAF1; --cherry:#7A1A2E; --cherry-d:#5A1021;
+  --blush:#F4D3D2; --blush-l:#FAE8E4; --gold:#B8924A; --brown:#3A1F1D;
+  --serif:"Cormorant Garamond","Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.22,.8,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);color:var(--brown);line-height:1.6;overflow-x:hidden;
+  background-color:var(--cream);
+  background-image:
+    radial-gradient(1200px 600px at 50% -10%,var(--blush-l),transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--cherry);letter-spacing:-.01em}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;overflow:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 56px) max(24px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 40px) max(24px,env(safe-area-inset-left,0px));
+}
+.hero::before{content:"";position:absolute;inset:clamp(12px,3vw,28px);border:1px solid rgba(184,146,74,.55);border-radius:28px;pointer-events:none;margin-top:env(safe-area-inset-top,0px)}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,4.6vw,1.5rem);color:var(--gold)}
+.sub-kicker{margin-top:6px;font-size:.95rem;color:var(--brown);opacity:.8}
+.heart-main{width:clamp(76px,22vw,112px);margin:clamp(20px,5vh,36px) auto 8px;animation:beat 2.4s ease-in-out infinite}
+.heart-main path{fill:var(--cherry)}
+.hero h1{font-size:clamp(2.35rem,10.5vw,5.6rem);line-height:1.04;max-width:14ch;margin:0 auto;font-style:italic}
+.lead{max-width:34ch;margin:clamp(18px,3vh,28px) auto 0;font-family:var(--serif);font-size:clamp(1.2rem,4.8vw,1.55rem);line-height:1.45}
+.btn{
+  margin-top:clamp(28px,5vh,44px);min-height:52px;padding:14px 36px;border-radius:999px;
+  background:var(--cherry);color:var(--paper);font-size:1.05rem;letter-spacing:.02em;
+  box-shadow:0 10px 26px -10px rgba(122,26,46,.65),inset 0 0 0 1px rgba(184,146,74,.6);
+  transition:transform .35s var(--ease),background .3s,box-shadow .3s;
+}
+.btn:hover{background:var(--cherry-d);transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.float{position:absolute;bottom:-30px;color:var(--blush);fill:currentColor;opacity:0;animation:rise linear infinite;pointer-events:none}
+@keyframes rise{0%{transform:translateY(0) rotate(-8deg);opacity:0}12%{opacity:.85}85%{opacity:.6}100%{transform:translateY(-105vh) rotate(10deg);opacity:0}}
+@keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.09)}28%{transform:scale(1)}42%{transform:scale(1.06)}70%{transform:scale(1)}}
+
+/* ---------- reasons ---------- */
+.reasons{padding:clamp(64px,12vw,120px) max(18px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 110px) max(18px,env(safe-area-inset-left,0px));max-width:1180px;margin:0 auto}
+.reasons-head{text-align:center;max-width:36rem;margin:0 auto clamp(36px,7vw,64px)}
+.reasons-head h2{font-size:clamp(2rem,8vw,3.6rem);line-height:1.1}
+.reasons-head p{margin-top:14px;font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,4.4vw,1.4rem);color:var(--brown);opacity:.85}
+.divider{display:flex;align-items:center;gap:12px;justify-content:center;margin-top:22px;color:var(--gold)}
+.divider::before,.divider::after{content:"";width:56px;height:1px;background:currentColor;opacity:.6}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr);gap:18px}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(3,1fr);gap:22px}}
+
+.card{
+  position:relative;text-align:left;width:100%;min-height:112px;padding:22px 22px 22px 80px;border-radius:22px;
+  background:var(--paper);border:1px solid rgba(184,146,74,.4);
+  box-shadow:0 14px 30px -22px rgba(90,16,33,.45);
+  opacity:0;transform:translateY(18px);
+  transition:opacity .6s var(--ease),transform .6s var(--ease),background .4s,border-color .4s,box-shadow .4s;
+  display:flex;align-items:center;
+}
+.card.in{opacity:1;transform:none}
+.num{
+  position:absolute;left:18px;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;
+  display:grid;place-items:center;font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--cherry);
+  background:var(--blush-l);border:1px solid rgba(184,146,74,.5);transition:all .4s var(--ease);
+}
+.txt{font-family:var(--serif);font-size:clamp(1.15rem,4.6vw,1.3rem);line-height:1.38;color:var(--brown)}
+.card.empty .txt{opacity:.45;font-style:italic;font-size:1rem;font-family:var(--sans)}
+.heart-pop{position:absolute;right:16px;top:14px;width:20px;height:20px;fill:var(--blush);transform:scale(.4);opacity:.7;transition:all .45s var(--ease)}
+.card:hover{border-color:var(--gold)}
+.card.loved{background:var(--cherry);border-color:var(--gold);box-shadow:0 18px 34px -20px rgba(90,16,33,.9)}
+.card.loved .txt{color:var(--paper)}
+.card.loved .num{background:var(--gold);color:var(--cherry-d);border-color:var(--gold)}
+.card.loved .heart-pop{opacity:1;transform:scale(1);fill:var(--blush);animation:pop .5s var(--ease)}
+@keyframes pop{0%{transform:scale(.2)}60%{transform:scale(1.5)}100%{transform:scale(1)}}
+.card.seen:not(.loved) .num{background:var(--blush);}
+
+/* sticky progress */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;justify-content:center;
+  padding:10px max(14px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 12px) max(14px,env(safe-area-inset-left,0px));
+  transform:translateY(120%);transition:transform .6s var(--ease);pointer-events:none;
+}
+.bar.show{transform:none}
+.bar-in{
+  pointer-events:auto;width:min(460px,100%);padding:12px 18px;border-radius:20px;
+  background:rgba(255,250,241,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border:1px solid rgba(184,146,74,.5);box-shadow:0 14px 34px -16px rgba(90,16,33,.55);
+}
+.bar-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:.92rem}
+.bar-top b{color:var(--cherry);font-family:var(--serif);font-size:1.15rem}
+.track{margin-top:8px;height:5px;border-radius:5px;background:var(--blush);overflow:hidden}
+.fill{height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,var(--cherry),var(--gold));transition:width .5s var(--ease)}
+
+/* ---------- letter ---------- */
+.finale{padding:clamp(56px,10vw,110px) max(20px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 150px) max(20px,env(safe-area-inset-left,0px))}
+.letter{
+  max-width:40rem;margin:0 auto;padding:clamp(30px,7vw,64px) clamp(22px,6vw,58px);border-radius:26px;
+  background:var(--paper);border:1px solid rgba(184,146,74,.5);box-shadow:0 30px 60px -40px rgba(90,16,33,.6);
+  position:relative;
+}
+.letter::before{content:"";position:absolute;inset:8px;border:1px solid rgba(184,146,74,.28);border-radius:19px;pointer-events:none}
+.letter h2{font-size:clamp(1.9rem,8vw,3rem);text-align:center;font-style:italic;margin-bottom:clamp(22px,5vw,36px)}
+.letter p{font-family:var(--serif);font-size:clamp(1.18rem,4.5vw,1.4rem);line-height:1.6;margin-bottom:1.1em;max-width:34em}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.sign{text-align:center;margin-top:clamp(34px,7vw,56px)}
+.sign .heart-end{width:56px;animation:beat 2.4s ease-in-out infinite}
+.sign .heart-end path{fill:var(--cherry)}
+.sign p{margin:14px auto 0;text-align:center;font-style:italic;color:var(--cherry);font-size:clamp(1.25rem,5vw,1.6rem)}
+
+@media(max-height:480px) and (orientation:landscape){.hero{min-height:auto;padding-top:calc(env(safe-area-inset-top,0px) + 40px)}.heart-main{display:none}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .card,.reveal{opacity:1;transform:none}.float{display:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="h" viewBox="0 0 32 29"><path d="M16 28.6C8 22 1 16.7 1 9.6 1 4.9 4.6 1.5 9 1.5c3 0 5.4 1.6 7 4.2 1.6-2.600 4-4.200 7-4.200 4.400 0 8 3.400 8 8.100 0 7.100-7 12.400-15 19z"/></symbol>
+</svg>
+
+<main>
+<section class="hero" id="top">
+  <p class="kicker">для самой любимой ♥</p>
+  <p class="sub-kicker">наши 5 месяцев вместе</p>
+  <svg class="heart-main" viewBox="0 0 32 29" aria-hidden="true"><path d="M16 28.6C8 22 1 16.7 1 9.6 1 4.9 4.6 1.5 9 1.5c3 0 5.4 1.6 7 4.2 1.6-2.600 4-4.200 7-4.200 4.400 0 8 3.400 8 8.100 0 7.100-7 12.400-15 19z"/></svg>
+  <h1>100 и 1 причина почему я люблю тебя&lt;3</h1>
+  <p class="lead">каждая из них — про тебя. и даже все 101 не смогут объяснить, насколько сильно я тебя люблю</p>
+  <button class="btn" id="start" type="button">начать читать ♥</button>
+</section>
+
+<section class="reasons" id="reasons">
+  <header class="reasons-head">
+    <h2>101 причина. одна ты.</h2>
+    <p>если бы мне пришлось объяснять, почему я люблю тебя, я бы начал с этого…</p>
+    <div class="divider" aria-hidden="true"><svg width="14" height="13" fill="currentColor"><use href="#h"/></svg></div>
+  </header>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="finale" id="finale">
+  <article class="letter">
+    <h2 class="reveal">и всё равно этого мало…</h2>
+    <p class="reveal">Любимая, эти пять месяцев очень важны для меня. Правда. Я не всегда умею красиво сказать вслух, поэтому сделал вот это.</p>
+    <p class="reveal">Я счастлив, что ты появилась в моей жизни. Рядом с тобой всё становится как-то теплее и проще, и я это ценю каждый день.</p>
+    <p class="reveal">Я люблю не только твою внешность, твою улыбку и твой голос. Я люблю твой характер, твои привычки и то, какая ты сама по себе — настоящая, без всяких «надо».</p>
+    <p class="reveal">Я хочу беречь наши отношения. Хочу учиться лучше тебя понимать, слушать тебя и не просто говорить красивые слова, а подтверждать их поступками. Не обещаю быть идеальным, но обещаю стараться.</p>
+    <p class="reveal">Даже сто одной причины не хватит, чтобы объяснить всё, что я чувствую. Но я хочу, чтобы у нас было ещё много новых счастливых моментов, и я буду рад создавать их вместе с тобой.</p>
+    <div class="sign reveal">
+      <svg class="heart-end" viewBox="0 0 32 29" aria-hidden="true"><path d="M16 28.6C8 22 1 16.7 1 9.6 1 4.9 4.6 1.5 9 1.5c3 0 5.4 1.6 7 4.2 1.6-2.600 4-4.200 7-4.200 4.400 0 8 3.400 8 8.100 0 7.100-7 12.400-15 19z"/></svg>
+      <p>с нашими 5 месяцами, любимая. я люблю тебя &lt;3</p>
+    </div>
+  </article>
+</section>
+</main>
+
+<div class="bar" id="bar" role="status" aria-live="polite">
+  <div class="bar-in">
+    <div class="bar-top"><span><b id="count">0</b> из 101 причин прочитано</span></div>
+    <div class="track"><div class="fill" id="fill"></div></div>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   101 ПРИЧИНА. Исходный порядок и формулировки сохранены.
+   Чтобы поправить текст — меняй строку в кавычках.
+   ===================================================================== */
+const REASONS = [
+  "я люблю тебя за то, что ты появилась в моей жизни",
+  "я люблю тебя за твою прекрасную улыбку",
+  "я люблю тебя за твои красивые глаза",
+  "я люблю тебя за твой голос, который я никогда не устану слушать",
+  "я люблю тебя за то, как ты смеёшься",
+  "я люблю тебя за то, что ты умеешь делать меня счастливым",
+  "я люблю тебя за то, что ты — это ты",
+  "я люблю тебя за твою нежность",
+  "я люблю тебя за твою заботу обо мне",
+  "я люблю тебя за то, что мне хочется рассказывать тебе обо всём",
+  "я люблю тебя за то, что даже обычный день становится лучше благодаря тебе",
+  "я люблю тебя за то, что я скучаю по тебе даже после недолгой разлуки",
+  "я люблю тебя за твои милые привычки",
+  "я люблю тебя за твои искренние эмоции",
+  "я люблю тебя за то, как ты произносишь моё имя",
+  "я люблю тебя за твои сообщения, которым я всегда рад",
+  "я люблю тебя за то, что твоё внимание для меня особенное",
+  "я люблю тебя за то, что ты можешь поднять мне настроение одним сообщением",
+  "я люблю тебя за то, что мне хочется делиться с тобой своими успехами",
+  "я люблю тебя за то, что рядом с тобой мне хочется становиться лучше",
+  "я люблю тебя за твою индивидуальность",
+  "я люблю тебя за твою красоту, которую замечаю каждый раз",
+  "я люблю тебя за твой характер",
+  "я люблю тебя за то, что ты умеешь отстаивать своё мнение",
+  "я люблю тебя за твою силу, даже когда ты сама её не замечаешь",
+  "я люблю тебя за твою искренность",
+  "я люблю тебя за то, что ты умеешь быть собой",
+  "я люблю тебя за то, что мне интересно узнавать тебя всё больше",
+  "я люблю тебя за твои мечты",
+  "я люблю тебя за то, что хочу поддерживать тебя в достижении этих мечт",
+  "я люблю тебя за наши разговоры обо всём на свете",
+  "я люблю тебя за наши общие воспоминания",
+  "я люблю тебя за каждое наше счастливое мгновение",
+  "я люблю тебя за моменты, когда мы смеёмся вместе",
+  "я люблю тебя за наши маленькие шутки, которые понимаем только мы",
+  "я люблю тебя за то, что мне хочется снова и снова переживать наши лучшие моменты",
+  "я люблю тебя за наши переписки",
+  "я люблю тебя за наши звонки",
+  "я люблю тебя за каждое твоё доброе слово",
+  "я люблю тебя за то, что даже молчать с тобой было бы приятно",
+  "я люблю тебя за то, что ты стала важной частью моей жизни",
+  "я люблю тебя за то, что мне хочется делиться с тобой своим будущим",
+  "я люблю тебя за то, что я думаю о тебе в течение дня",
+  "я люблю тебя за то, что мне хочется узнавать, как прошёл твой день",
+  "я люблю тебя за то, что я переживаю за тебя",
+  "я люблю тебя за то, что мне важно твоё настроение",
+  "я люблю тебя за то, что мне небезразличны твои чувства",
+  "я люблю тебя за то, что мне хочется обнимать тебя, когда тебе грустно",
+  "я люблю тебя за то, что хочу быть рядом не только в хорошие дни",
+  "я люблю тебя за то, что хочу поддерживать тебя, когда тебе тяжело",
+  "я люблю тебя за то, что мне хочется видеть тебя счастливой",
+  "я люблю тебя за то, что твои успехи радуют меня",
+  "я люблю тебя за то, что мне хочется гордиться тобой",
+  "я люблю тебя за то, что я хочу быть человеком, которому ты можешь доверять",
+  "я люблю тебя за то, что мне хочется доказывать свою любовь поступками",
+  "я люблю тебя за то, что я хочу учиться лучше понимать тебя",
+  "я люблю тебя за то, что мне хочется исправлять свои ошибки ради наших отношений",
+  "я люблю тебя за то, что ты помогаешь мне замечать мои недостатки",
+  "я люблю тебя за то, что наши отношения учат меня быть внимательнее",
+  "я люблю тебя за то, что мне хочется беречь то, что между нами есть",
+  "я люблю тебя за то, что мне хочется держать тебя за руку",
+  "я люблю тебя за то, что мне хочется обнимать тебя без всякого повода",
+  "я люблю тебя за то, что мне хочется смотреть тебе в глаза и улыбаться",
+  "я люблю тебя за то, что мне хочется целовать тебя в лоб",
+  "я люблю тебя за то, что мне хочется засыпать рядом с тобой",
+  "я люблю тебя за то, что мне хочется просыпаться и видеть тебя рядом",
+  "я люблю тебя за то, что я представляю наши будущие встречи",
+  "я люблю тебя за то, что мне хочется гулять с тобой даже без конкретной цели",
+  "я люблю тебя за то, что мне хочется проводить с тобой больше времени",
+  "я люблю тебя за то, что даже простые вещи с тобой приобретают особый смысл",
+  "я люблю тебя за то, что мне хочется дарить тебе подарки и видеть твою улыбку",
+  "я люблю тебя за то, что мне хочется удивлять тебя приятными мелочами",
+  "я люблю тебя за то, что мне хочется запоминать то, что тебе нравится",
+  "я люблю тебя за то, что мне хочется делать для тебя что-то приятное просто так",
+  "я люблю тебя за то, что мне хочется создавать для нас новые воспоминания",
+  "я люблю тебя за то, что я могу представить тебя частью своего будущего",
+  "я люблю тебя за то, что мне хочется путешествовать с тобой",
+  "я люблю тебя за то, что мне хочется вместе с тобой открывать новые места",
+  "я люблю тебя за то, что мне хочется отмечать с тобой важные даты",
+  "я люблю тебя за то, что мне хочется прожить с тобой ещё много счастливых дней",
+  "я люблю тебя за то, что ты не просто моя любимая девушка, а особенный для меня человек",
+  "я люблю тебя за то, что мне хочется узнавать даже самые маленькие детали о тебе",
+  "я люблю тебя за то, что мне хочется понимать, что скрывается за твоей улыбкой",
+  "я люблю тебя за то, что я хочу слышать не только о твоих радостях, но и о твоих переживаниях",
+  "я люблю тебя за то, что мне хочется, чтобы рядом со мной ты чувствовала себя любимой",
+  "я люблю тебя за то, что мне хочется, чтобы ты знала свою ценность",
+  "я люблю тебя за то, что мне хочется уважать твои чувства и границы",
+  "я люблю тебя за то, что мне хочется давать тебе поводы улыбаться",
+  "я люблю тебя за то, что мне хочется быть для тебя поддержкой, а не причиной твоих слёз",
+  "я люблю тебя за то, что мне хочется каждый день показывать, насколько ты мне дорога",
+  "я люблю тебя за то, что я выбираю тебя не только в счастливые моменты",
+  "я люблю тебя за то, что мне хочется работать над нашими отношениями, даже когда что-то идёт не так",
+  "я люблю тебя за то, что мне хочется учиться слышать тебя, а не просто отвечать тебе",
+  "я люблю тебя за то, что мне хочется возвращать твою улыбку, если я случайно её забрал",
+  "я люблю тебя за то, что мне хочется, чтобы со временем ты доверяла мне ещё больше",
+  "я люблю тебя за то, что мне хочется создавать отношения, в которых нам обоим будет хорошо",
+  "я люблю тебя за то, что мне хочется проходить с тобой через разные этапы жизни",
+  "я люблю тебя за то, что мне хочется однажды вспоминать нашу историю и улыбаться",
+  "я люблю тебя за то, что я хочу продолжать узнавать тебя даже спустя много лет",
+  "я люблю тебя за то, что среди всех возможных людей именно ты стала человеком, которого я так сильно полюбил",
+  "я люблю тебя просто за то, что это ты, и мне не нужна никакая другая причина, чтобы продолжать любить тебя",
+];
+/* ===================================================================== */
+
+(function () {
+  const TOTAL = 101;
+  const grid = document.getElementById('grid');
+  const bar = document.getElementById('bar');
+  const countEl = document.getElementById('count');
+  const fill = document.getElementById('fill');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const seen = new Set();
+
+  // build cards
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < TOTAL; i++) {
+    const text = (REASONS[i] || '').trim();
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'card' + (text ? '' : ' empty');
+    b.dataset.i = i;
+    b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = '<span class="num"></span><span class="txt"></span>' +
+      '<svg class="heart-pop" aria-hidden="true"><use href="#h"/></svg>';
+    b.querySelector('.num').textContent = i + 1;
+    b.querySelector('.txt').textContent = text || 'здесь будет причина №' + (i + 1);
+    b.addEventListener('click', () => {
+      const on = b.classList.toggle('loved');
+      b.setAttribute('aria-pressed', on);
+      mark(i, b);
+    });
+    frag.appendChild(b);
+  }
+  grid.appendChild(frag);
+
+  function mark(i, el) {
+    el.classList.add('seen');
+    if (!seen.has(i)) {
+      seen.add(i);
+      countEl.textContent = seen.size;
+      fill.style.width = (seen.size / TOTAL * 100) + '%';
+    }
+  }
+
+  // reveal on scroll + count as "read" after being in view for a moment
+  const timers = new Map();
+  const cardObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const el = e.target, i = +el.dataset.i;
+      if (e.isIntersecting) {
+        el.classList.add('in');
+        if (!seen.has(i) && !timers.has(el)) {
+          timers.set(el, setTimeout(() => { mark(i, el); cardObs.unobserve(el); timers.delete(el); }, 1200));
+        }
+      } else if (timers.has(el)) {
+        clearTimeout(timers.get(el)); timers.delete(el);
+      }
+    });
+  }, { threshold: 0.7 });
+  grid.querySelectorAll('.card').forEach(c => cardObs.observe(c));
+
+  // letter reveal (staggered)
+  const revObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); revObs.unobserve(e.target); }
+    });
+  }, { threshold: 0.35 });
+  document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+  // progress bar only while inside the reasons section
+  const secObs = new IntersectionObserver(es => {
+    bar.classList.toggle('show', es[0].isIntersecting);
+  }, { threshold: 0.02 });
+  secObs.observe(document.getElementById('reasons'));
+
+  // start button
+  document.getElementById('start').addEventListener('click', () => {
+    document.getElementById('reasons').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  });
+
+  // floating hearts in hero (few, subtle)
+  if (!reduce) {
+    const hero = document.getElementById('top');
+    for (let k = 0; k < 9; k++) {
+      const s = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      const size = 10 + Math.random() * 14;
+      s.setAttribute('class', 'float');
+      s.setAttribute('width', size); s.setAttribute('height', size);
+      s.setAttribute('viewBox', '0 0 32 29');
+      s.style.left = (6 + Math.random() * 88) + '%';
+      s.style.animationDuration = (11 + Math.random() * 9) + 's';
+      s.style.animationDelay = (Math.random() * 10) + 's';
+      s.innerHTML = '<use href="#h"/>';
+      hero.appendChild(s);
+    }
+  }
+})();
+</script>
+</body>
+</html>
